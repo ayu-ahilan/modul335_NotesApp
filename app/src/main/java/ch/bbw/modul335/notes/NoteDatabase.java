@@ -10,6 +10,13 @@ public class NoteDatabase extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "notedb";
     private static final String DATABASE_TABLE = "notestable";
 
+    //coloum name for Database
+    private static final String KEY_ID = "id";
+    private static final String KEY_TITLE = "title";
+    private static final String KEY_CONTENT = "content";
+    private static final String KEY_DATE = "date";
+    private static final String KEY_TIME = "time";
+
     NoteDatabase(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
