@@ -28,7 +28,7 @@ public class NoteDatabase extends SQLiteOpenHelper {
                 KEY_TITLE + " TEXT," +
                 KEY_CONTENT + " TEXT," +
                 KEY_DATE + " TEXT," +
-                KEY_TIME+ " TEXT," + ")";
+                KEY_TIME+ " TEXT" + ")";
 
         db.execSQL(query);
 
