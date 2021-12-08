@@ -37,6 +37,9 @@ public class NoteDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        if (oldVersion >= newVersion)
+            return;
+        db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE);
+        onCreate(db);
     }
 }
