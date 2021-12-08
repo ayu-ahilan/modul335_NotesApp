@@ -23,6 +23,15 @@ public class NoteDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        // create TABLE nametame(id INT PRIMARY KEY, title TEXT, content TEXT, date TEXT, time TEXT);
+        String query = "CREATE TABLE " + DATABASE_TABLE + "(" + KEY_ID + " INT PRIMARY KEY, " +
+                KEY_TITLE + " TEXT," +
+                KEY_CONTENT + " TEXT," +
+                KEY_DATE + " TEXT," +
+                KEY_TIME+ " TEXT," + ")";
+
+        db.execSQL(query);
+
 
     }
 
